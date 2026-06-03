@@ -1,11 +1,14 @@
 # Task 0: codebase
 
-This is a hello-world project with multi-tier architecture:
+All code is stored on Harness Code Repository.
 
-The frontend is a React SPA where you can add/edit/delete todos.
+![codebase](images/codebase.png)
 
-https://github.com/joekyo/devops-tasks-frontend-app
 
-The backend is a Spring Boot application which provides the corresponding APIs for listing/adding/modifying/deleting todos and saves the result into the cloud-managed database.
+The hello-world project consists of two applications:
 
-https://github.com/joekyo/devops-tasks-backend-app
+The frontend app is a React SPA where you can list, add and delete todos.
+
+The backend app is a Spring Boot application which provides the corresponding APIs and saves the todos into PostgreSQL, namely AWS RDS.
+
+![aws](images/aws.svg)
