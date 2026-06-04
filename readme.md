@@ -21,6 +21,8 @@ The backend app is a Spring Boot application which provides the corresponding AP
 
 Terraform code for creating AWS EKS and RDS can be found on Harness Code Repository.
 
+![aws](images/terraform.png)
+
 ![aws](images/aws.svg)
 
 # Task 2: Kubernetes
