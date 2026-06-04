@@ -19,15 +19,28 @@ The backend app is a Spring Boot application which provides the corresponding AP
 
 # Task 1: Infrastructure as Code
 
-Terraform code for creating AWS EKS and RDS can be found on Harness Code Repository.
+The Terraform code can be found on Harness Code Repository.
 
 ![aws](images/terraform.png)
 
+Below is the EKS and RDS that will be created by Terraform.
+
 ![aws](images/aws.svg)
+
+The state files are stored in HCP Terraform https://app.terraform.io/app/nianzu/workspaces
+
+![aws](images/hashicorp.png)
+
+The Terraform code is mainly from these two repositories:
+
+https://github.com/hashicorp-education/learn-terraform-provision-eks-cluster
+
+https://github.com/hashicorp-education/learn-terraform-rds
+
 
 # Task 2: Kubernetes
 
-Kubernetes maninfests of Deployment, Service and Ingress for each environments are stored in these two repositories.
+Kubernetes maninfests of Deployment, Service and Ingress for each environments can be found in these two repositories.
 
 ![aws](images/kustomize.png)
 
@@ -47,11 +60,6 @@ terraform plan
 terraform apply
 ```
 
-The Terraform code is mainly from these two repositories:
-
-https://github.com/hashicorp-education/learn-terraform-provision-eks-cluster
-https://github.com/hashicorp-education/learn-terraform-rds
-
 
 ## Task 3.1: Service Pipeline
 
@@ -64,6 +72,7 @@ When new git commit or branch is pushed to code repository, the CI pipeline will
 The app will be built using NPM or Gradle, and the Docker image will be published to Docker registry.
 
 https://hub.docker.com/repository/docker/joekyo/todo-frontend-app/
+
 https://hub.docker.com/repository/docker/joekyo/todo-backend-app/
 
 These two CD pipelines are for deploying the apps to Kubernetes clusters using the above manifests code with Kustomize.
